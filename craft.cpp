@@ -47,7 +47,7 @@ void Round(int r) {
         ind = 31 - r;
 
     Stt[4] ^= RC4[ind]; // AddConstant
-    Stt[4] ^= RC3[ind];
+    Stt[5] ^= RC3[ind];
 
     for (int i = 0; i < 16; i++) // AddTweakey
         Stt[i] ^= TK[ind % 4][i];
